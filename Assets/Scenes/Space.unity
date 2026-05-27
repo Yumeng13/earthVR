@@ -257,6 +257,7 @@ MonoBehaviour:
   subPointText: {fileID: 1089793261}
   satellite: {fileID: 1930259488}
   antenna: {fileID: 1203292201}
+  earth: {fileID: 481240464}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +674,7 @@ GameObject:
   - component: {fileID: 481240460}
   - component: {fileID: 481240465}
   m_Layer: 0
-  m_Name: Earth
+  m_Name: EarthMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,6 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EarthRotate
   rotationSpeed: 10
+  tiltAngle: 30
 --- !u!135 &481240461
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -785,7 +787,7 @@ Transform:
   m_Children:
   - {fileID: 1014355472}
   - {fileID: 1101991193}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 919929816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &481240465
 MonoBehaviour:
@@ -800,6 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EarthRotate
   rotationSpeed: 10
+  tiltAngle: 30
 --- !u!1 &533376020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1385,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858726272}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &919929815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 919929816}
+  m_Layer: 0
+  m_Name: EarthAxis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &919929816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919929815}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 481240464}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938083986
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,7 +3149,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 481240464}
+  - {fileID: 919929816}
   - {fileID: 1930259488}
   - {fileID: 2065555466}
   - {fileID: 1236007255}
